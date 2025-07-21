@@ -18,7 +18,6 @@ async def connect_db() -> None:
     """Create database connection."""
     global db_client
     db_client = AsyncIOMotorClient(settings.DATABASE_URL)
-    print(db_client)
     print("DB Connected!")
 
 

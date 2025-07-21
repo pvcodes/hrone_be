@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     DEBUG: bool = True
     DATABASE_URL: str
     ALLOWED_ORIGINS: str = ""
+    ENV: str = ""
 
     @field_validator("ALLOWED_ORIGINS")
     def parse_allowed_origins(cls, v: str):

@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from core.config import settings
 from db.main import connect_db, close_db, get_db_client
 from routers import products, user, orders
+from core.config import settings
 
 app = FastAPI(title="Ecom BE")
 
@@ -38,4 +39,7 @@ async def health_check():
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run("main:app", host="0.0.0.0", port=8080, reload=True)
+    if settings.ENV != "PRODUCTION":
+        uvicorn.run("main:app", host="0.0.0.0", port=8080, reload=True)
+    else:
+        uvicorn.run("main:app", workers=4, reload=False, log_level="info")
