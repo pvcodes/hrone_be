@@ -44,7 +44,7 @@ Minimalist FastAPI backend for an e-commerce system with MongoDB.
    uv run main.py
    ```
 
-#### What else can be done?
+## What else can be done?
 
 1. **Introduce middleware for authentication and authorization**:
 
