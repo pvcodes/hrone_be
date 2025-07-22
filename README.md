@@ -1,6 +1,6 @@
 # E-commerce Backend
 
-Minimalist FastAPI backend for an e-commerce system with MongoDB.
+Minimalist FastAPI backend for an e-commerce system with MongoDB. [click here,  must read](#what-else-can-be-done)
 
 ### Keep in mind while evaluating the code
 
